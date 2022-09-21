@@ -8,7 +8,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "To-do",
-      templat: "./src/index.html",
+      template: "./src/index.html",
     }),
     new MiniCssExtractPlugin(),
   ],
@@ -24,15 +24,15 @@ module.exports = {
   module: {
     rules: [
       {
-        test: "/.css$/",
+        test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: "/.(png|svg|jpg|jpeg|gif)$/",
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
         type: "asset/resource",
       },
       {
-        test: "/.(woff|woff2|ttf|eot|otf)$/",
+        test: /\.(woff|woff2|ttf|eot|otf)$/,
         type: "asset/resource",
       },
     ],
