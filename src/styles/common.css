@@ -8,17 +8,18 @@
   --background-color: rgb(31, 31, 31);
   --text-color: rgb(226, 226, 226);
   --sidebar-color: rgb(36, 36, 36);
+  --item-hover: rgb(54, 54, 54);
   --sidebar-item-margin: 10px;
 }
 
-html {
+html,
+body {
   width: 100vw;
   height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  /* color: white; */
 }
 
-body {
-  min-height: 100%;
+#content {
+  height: 100%;
 }
