@@ -4,7 +4,6 @@ import Accordion from "../functions/accordion";
 import inboxImage from "../images/inbox.svg";
 import todayImage from "../images/today.svg";
 import upcomingImage from "../images/upcoming.svg";
-import arrowImage from "../images/right-arrow.svg";
 
 const loadSidebar = () => {
   const content = document.querySelector("#content");
@@ -34,6 +33,10 @@ const loadSidebar = () => {
   todayImg.src = todayImage;
   upcomingImg.src = upcomingImage;
 
+  inboxLink.classList.add("sidebar-item");
+  todayLink.classList.add("sidebar-item");
+  upcomingLink.classList.add("sidebar-item");
+
   inboxLink.classList.add("inbox-link");
   todayLink.classList.add("today-link");
   upcomingLink.classList.add("upcoming-link");
@@ -49,6 +52,7 @@ const loadSidebar = () => {
 
   const projectDetails = document.createElement("details");
   projectDetails.classList.add("project-details");
+  projectDetails.classList.add("sidebar-item");
 
   const detailsSummary = document.createElement("summary");
   detailsSummary.textContent = "Projects";
@@ -58,12 +62,27 @@ const loadSidebar = () => {
 
   const defaultProject = document.createElement("a");
   defaultProject.textContent = "Personal";
-  defaultProject.setAttribute("href", "#");
 
   projectContainer.appendChild(defaultProject);
 
   projectDetails.appendChild(detailsSummary);
   projectDetails.appendChild(projectContainer);
+
+  // Add icon
+
+  const addTodoContainer = document.createElement("div");
+  addTodoContainer.classList.add("add-todo-container");
+
+  const addTodoButton = document.createElement("button");
+  addTodoButton.setAttribute("type", "button");
+  addTodoButton.classList.add("add-todo-button");
+  addTodoButton.textContent = "+";
+
+  const addTodoText = document.createElement("p");
+  addTodoText.textContent = "Add to-do";
+
+  addTodoContainer.appendChild(addTodoText);
+  addTodoContainer.appendChild(addTodoButton);
 
   // Sidebar children
 
@@ -71,6 +90,7 @@ const loadSidebar = () => {
   sidebar.appendChild(todayLink);
   sidebar.appendChild(upcomingLink);
   sidebar.appendChild(projectDetails);
+  sidebar.appendChild(addTodoContainer);
 
   content.appendChild(sidebar);
 
