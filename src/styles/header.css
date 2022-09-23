@@ -1,0 +1,54 @@
+header {
+  grid-area: header;
+  position: relative;
+  width: 100%;
+  background-color: var(--header-color);
+  z-index: 999;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+}
+
+.sidebar-toggle:focus ~ .sidebar-toggle-label {
+  outline: 2px solid black;
+}
+
+.sidebar-toggle-label {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-toggle-label span,
+.sidebar-toggle-label span::before,
+.sidebar-toggle-label span::after {
+  display: block;
+  position: relative;
+  width: 2em;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.sidebar-toggle-label span::before,
+.sidebar-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.sidebar-toggle-label span::before {
+  bottom: 7px;
+}
+
+.sidebar-toggle-label span::after {
+  top: 7px;
+}
