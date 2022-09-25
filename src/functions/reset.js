@@ -6,6 +6,7 @@ function reset() {
 
   while (lastChild != content.children[1]) {
     content.removeChild(lastChild);
+    lastChild.classList.remove("active");
     lastChild = content.lastElementChild;
   }
 }
