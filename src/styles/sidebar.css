@@ -94,14 +94,16 @@
   transition: opacity 0.2s ease-in-out;
 }
 
-/* Hover */
+/* Hover and click*/
 
 .sidebar a:hover,
-.add-todo-button:hover {
-  background-color: var(--item-hover);
+.add-todo-button:hover,
+.sidebar .active {
+  background-color: var(--dark-grey);
 }
 
-.sidebar a:hover {
+.sidebar a:hover,
+.sidebar .active {
   border-radius: 5px;
 }
 
