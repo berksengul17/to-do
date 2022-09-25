@@ -6,10 +6,10 @@
 
 :root {
   --background-color: rgb(31, 31, 31);
-  --text-color: rgb(226, 226, 226);
   --sidebar-color: rgb(36, 36, 36);
   --header-color: rgb(40, 40, 40);
-  --item-hover: rgb(54, 54, 54);
+  --dark-grey: rgb(54, 54, 54);
+  --text-color: rgb(226, 226, 226);
   --sidebar-item-margin: 10px;
 }
 
