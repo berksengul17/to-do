@@ -1,0 +1,13 @@
+.inbox-container {
+  background-color: var(--background-color);
+}
+
+.inbox-container h1 {
+  color: var(--text-color);
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--dark-grey);
+}
